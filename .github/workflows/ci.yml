@@ -5,13 +5,9 @@ on:
   pull_request:
     branches:
       - master
-    paths:
-      - "src/**"
   push:
     branches:
       - master
-    paths:
-      - "src/**"
 
 permissions:
   contents: write
