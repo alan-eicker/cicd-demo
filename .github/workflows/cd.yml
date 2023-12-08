@@ -1,0 +1,25 @@
+name: Continuous Deployment Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - "src/**"
+
+defaults:
+  run:
+    working-directory: ./src
+
+jobs:
+  test:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout Repository
+      - name: Install Dependencies
+        run: npm install
+      - name: Deploy App
+        run: npm run deploy
