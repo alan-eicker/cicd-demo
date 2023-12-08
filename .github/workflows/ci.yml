@@ -42,4 +42,4 @@ jobs:
       - name: Build App
         run: npm run build
       - name: Run App
-        run: npm run deply
+        run: npm run deploy
