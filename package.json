@@ -5,7 +5,6 @@
   "homepage": "https://alan-eicker.github.io/cicd-demo",
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@babel/plugin-proposal-private-property-in-object": "7.21.0-placeholder-for-preset-env.2",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -62,6 +61,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "lint": "eslint src/**/*.js",
     "test": "jest --coverage"
   },
   "eslintConfig": {
@@ -133,12 +133,8 @@
     ],
     "resetMocks": true
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^4.0.0"
   }
 }
